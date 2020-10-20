@@ -6,8 +6,13 @@ gc()             #garbage collection
 require("data.table")
 require("xgboost")
 
+#Para trabajar en la nube
+setwd( "~/buckets/b1/" )
+dataset <- fread( "./datasetsOri/paquete_premium.txt.gz")
+
+
 #cargo el dataset
-dataset <- fread( "C:/Users/gtreb/Desktop/DMEyF/Datos/datasets/paquete_premium_201906_202001.txt.gz")
+#dataset <- fread( "C:/Users/gtreb/Desktop/DMEyF/Datos/datasets/paquete_premium_201906_202001.txt.gz")
 
 
 #paso la clase a binaria que tome valores {0,1}  enteros
